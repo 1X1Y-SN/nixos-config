@@ -24,26 +24,6 @@
   };
 
   fileSystems = {
-    "/boot" = {
-      device = "/dev/nvme0n1p1";
-      fsType = "vfat";
-      options = ["defaults"];
-    };
-    "/" = {
-      device = "/dev/nvme0n1p2";
-      fsType = "btrfs";
-      options = ["noatime" "compress=zstd" "space_cache=v2" "discard=async" "subvol=@"];
-    };
-    "/home" = {
-      device = "/dev/nvme0n1p2";
-      fsType = "btrfs";
-      options = ["noatime" "compress=zstd" "space_cache=v2" "discard=async" "subvol=@home"];
-    };
-    "/nix" = {
-      device = "/dev/nvme0n1p2";
-      fsType = "btrfs";
-      options = ["noatime" "compress=zstd" "space_cache=v2" "discard=async" "subvol=@nix"];
-    };
     "/mnt/samsung-ssd-860" = {
       device = "/dev/sda1";
       fsType = "btrfs";
