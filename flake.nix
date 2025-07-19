@@ -3,6 +3,9 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
+    disko = {
+      url = "github:nix-community/disko";
+      inputs.nixpkgs.follows = "nixpkgs";
     home-manager = {
       url = "github:nix-community/home-manager/release-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -11,6 +14,7 @@
 
   outputs = {
     nixpkgs,
+    disko,
     home-manager,
     ...
   }: let
@@ -27,6 +31,7 @@
         modules = [
           ./hosts/${hostName}/configuration.nix
           ./hosts/${hostName}/hardware-configuration.nix
+          disko.nixosModules.disko
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
