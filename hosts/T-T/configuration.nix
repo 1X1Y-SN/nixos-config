@@ -7,6 +7,7 @@
 }: {
   imports = [
     ./hardware-configuration.nix
+    ./disko-config.nix
   ];
 
   system.stateVersion = "25.05";
