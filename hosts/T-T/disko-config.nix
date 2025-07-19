@@ -60,18 +60,5 @@
         };
       };
     };
-    mount = {
-      "samsung-ssd-860" = {
-        device = "/dev/sda1";
-        type = "btrfs";
-        mountpoint = "/mnt/samsung-ssd-860";
-        mountOptions = [
-          "noatime"
-          "compress=zstd"
-          "space_cache=v2"
-          "discard=async"
-        ];
-      };
-    };
   };
 }
