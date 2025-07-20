@@ -101,10 +101,11 @@
   users.users.${user} = {
     isNormalUser = true;
     description = user;
-    extraGroups = ["docker" "networkmanager" "wheel"];
-    #   packages = with pkgs; [
-    #     tree
-    #   ];
+    extraGroups = [
+      "wheel"
+      "networkmanager"
+      "docker"
+    ];
   };
 
   nixpkgs.config.allowUnfree = true;
@@ -118,6 +119,4 @@
     nvidia-docker
     wget
   ];
-
-  programs.nix-ld.enable = true;
 }
