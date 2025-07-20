@@ -12,14 +12,12 @@
   programs.home-manager.enable = true;
 
   home.packages = with pkgs; [
-    firefox
     hyprpaper
     hyprpolkitagent
     kdePackages.dolphin
     kdePackages.kio-extras
     nerd-fonts.jetbrains-mono
     qt6.qtwayland
-    wofi
   ];
 
   fonts.fontconfig = {
@@ -28,8 +26,12 @@
   };
 
   imports = [
+    ./alacritty.nix
+    ./firefox.nix
+    ./helix.nix
     ./hyprland.nix
     ./waybar.nix
+    ./wofi.nix
     ./zed-editor.nix
   ];
 }
