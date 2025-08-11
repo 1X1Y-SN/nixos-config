@@ -2,8 +2,8 @@
   services.hyprpaper = {
     enable = true;
     settings = {
-      preload = [];
-      wallpaper = [];
+      preload = ["$HOME/Pictures/wallpapers/synthwave.jpg"];
+      wallpaper = ["DP-1, $HOME/Pictures/wallpapers/synthwave.jpg"];
     };
   };
 }
