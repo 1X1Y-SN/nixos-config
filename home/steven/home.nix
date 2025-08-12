@@ -19,8 +19,6 @@
     transmission_4-qt
   ];
 
-  home.file."Pictures".source = "/mnt/samsung-ssd-860/Pictures";
-
   fonts.fontconfig = {
     enable = true;
     defaultFonts.monospace = ["JetBrainsMono Nerd Font Mono"];
